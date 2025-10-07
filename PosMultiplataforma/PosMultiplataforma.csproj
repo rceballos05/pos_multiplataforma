@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst;net9.0-windows10.0.19041</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PosMultiplataforma</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <ApplicationTitle>PosMultiplataforma POS</ApplicationTitle>
+    <ApplicationId>com.posmultiplataforma.app</ApplicationId>
+    <ApplicationIdGuid>e4c447d3-87af-4a64-8be2-5f803a022b7c</ApplicationIdGuid>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MauiXaml Include="App.xaml" />
+    <MauiXaml Include="MainPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiAsset Include="wwwroot\\**" LogicalName="wwwroot\\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.0-preview.6.8842" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.0-preview.6.8842" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="9.0.0-preview.6.8842" />
+  </ItemGroup>
+</Project>

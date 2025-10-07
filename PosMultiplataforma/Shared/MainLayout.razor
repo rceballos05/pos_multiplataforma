@@ -1,0 +1,16 @@
+@inherits LayoutComponentBase
+
+@* Estructura general del POS según la imagen de referencia *@
+<div class="app-shell">
+    <header class="app-shell__header">
+        <TopBar />
+    </header>
+    <div class="app-shell__body">
+        <aside class="app-shell__sidebar">
+            <SideMenu />
+        </aside>
+        <main class="app-shell__main">
+            @Body
+        </main>
+    </div>
+</div>
