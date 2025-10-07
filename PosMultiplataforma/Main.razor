@@ -1,0 +1,11 @@
+@* Router principal del proyecto Blazor Hybrid *@
+<Router AppAssembly="@typeof(Main).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(Shared.MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(Shared.MainLayout)">
+            <p role="alert">No se encontró el recurso solicitado.</p>
+        </LayoutView>
+    </NotFound>
+</Router>

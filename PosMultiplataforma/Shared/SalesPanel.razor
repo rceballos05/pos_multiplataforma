@@ -1,0 +1,173 @@
+@* Panel de ventas principal inspirado en la sección central de la imagen *@
+<div class="sales-panel">
+    <div class="sales-panel__layout">
+        <div class="sales-panel__left">
+            @* Tarjeta de información de caja como en la parte superior izquierda *@
+            <section class="sales-card sales-card--accent">
+                <div class="sales-card__header">Caja 01</div>
+                <div class="sales-card__body">
+                    <p class="sales-card__title">Turno matutino</p>
+                    <p class="sales-card__text">Supervisor: Ana Fernández</p>
+                    <p class="sales-card__text">Documento activo: Boleta electrónica</p>
+                </div>
+            </section>
+
+            @* Detalle de producto mostrado en la columna izquierda de la imagen *@
+            <section class="sales-card sales-card--product">
+                <div class="sales-card__header">Detalle de producto</div>
+                <div class="sales-card__body sales-card__body--product">
+                    <div class="product-preview">
+                        <div class="product-preview__bottle"></div>
+                    </div>
+                    <div class="product-preview__info">
+                        <h2 class="product-preview__name">Coca Cola 2.5 LTS desechable</h2>
+                        <p class="product-preview__code">SKU: 7801005543554</p>
+                        <p class="product-preview__price">$2.190</p>
+                    </div>
+                </div>
+            </section>
+
+            @* Área para ingresar códigos como en la referencia *@
+            <section class="sales-card sales-card--input">
+                <div class="sales-card__header">Ingresar código</div>
+                <div class="sales-card__body sales-card__body--input">
+                    <input class="sales-input" placeholder="Escanea o escribe el código de barras" />
+                    <button class="sales-button sales-button--primary">Agregar producto</button>
+                </div>
+            </section>
+
+            @* Selección de tipo de documento en la parte inferior izquierda *@
+            <section class="sales-card sales-card--document">
+                <div class="sales-card__header">Tipo de documento</div>
+                <div class="sales-card__body sales-card__body--document">
+                    <label class="sales-radio">
+                        <input type="radio" name="documentType" checked />
+                        <span>Boleta electrónica</span>
+                    </label>
+                    <label class="sales-radio">
+                        <input type="radio" name="documentType" />
+                        <span>Factura electrónica</span>
+                    </label>
+                    <label class="sales-radio">
+                        <input type="radio" name="documentType" />
+                        <span>Nota de crédito</span>
+                    </label>
+                </div>
+            </section>
+        </div>
+
+        <div class="sales-panel__right">
+            @* Listado de productos como el panel superior derecho *@
+            <section class="sales-card sales-card--list">
+                <div class="sales-card__header">Productos disponibles</div>
+                <div class="sales-card__body sales-card__body--scroll">
+                    <table class="sales-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7801005543554</td>
+                                <td>Coca Cola 2.5 LTS desechable</td>
+                                <td>$2.190</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>7800954464552</td>
+                                <td>Producto número 2 con descripción</td>
+                                <td>$1.490</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>7800954464553</td>
+                                <td>Producto número 3 con descripción</td>
+                                <td>$3.290</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>7800954464554</td>
+                                <td>Producto número 4 con descripción</td>
+                                <td>$820</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>7800954464555</td>
+                                <td>Producto número 5 con descripción</td>
+                                <td>$2.650</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            @* Detalle de venta del lado derecho inferior de la imagen *@
+            <section class="sales-card sales-card--cart">
+                <div class="sales-card__header">Detalle de venta</div>
+                <div class="sales-card__body sales-card__body--scroll">
+                    <table class="sales-table sales-table--compact">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cant.</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coca Cola 2.5 LTS desechable</td>
+                                <td>2</td>
+                                <td>$2.190</td>
+                                <td>$4.380</td>
+                            </tr>
+                            <tr>
+                                <td>Producto número 2 con descripción</td>
+                                <td>1</td>
+                                <td>$1.490</td>
+                                <td>$1.490</td>
+                            </tr>
+                            <tr>
+                                <td>Producto número 4 con descripción</td>
+                                <td>3</td>
+                                <td>$820</td>
+                                <td>$2.460</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            @* Totales y acciones como en la franja inferior derecha *@
+            <div class="sales-panel__footer">
+                <div class="sales-summary">
+                    <div class="sales-summary__row">
+                        <span>Subtotal:</span>
+                        <span>$6.151</span>
+                    </div>
+                    <div class="sales-summary__row">
+                        <span>Descuento:</span>
+                        <span>$-1.169</span>
+                    </div>
+                    <div class="sales-summary__row">
+                        <span>IVA:</span>
+                        <span>$1.338</span>
+                    </div>
+                </div>
+                <div class="sales-total">
+                    <div class="sales-total__label">Total a pagar</div>
+                    <div class="sales-total__value">$7.320</div>
+                    <div class="sales-total__actions">
+                        <button class="sales-button sales-button--success">Pagar</button>
+                        <button class="sales-button sales-button--danger">Cancelar venta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
